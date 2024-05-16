@@ -183,16 +183,20 @@ function bai8()
 //bai 11
 let array111 = document.querySelector('#input111')
 let array112 = document.querySelector('#input112')
-let resultb11 = document.querySelector(".result8");
+let resultb11 = document.querySelector(".result11");
 function bai11()
 {
-    arr111 = array111.value.split();
-    arr112 = array112.value.split();
-    let resutl ={};
-    for(i in arr111)
+    let arr111 = array111.value.split('');
+    let arr112 = array112.value.split('');
+    let res = "";
+    for(let i of arr111)  
         {
-
+            if(arr112.includes(i))
+                {
+                    res += i;
+                }   
         }
+    resultb11.innerText = res;
 }
 
 
