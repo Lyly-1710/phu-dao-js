@@ -188,7 +188,7 @@ function bai11()
 {
     let arr111 = array111.value.split('');
     let arr112 = array112.value.split('');
-    let res = "";
+    let res = [];
     for(let i of arr111)  
         {
             if(arr112.includes(i))
@@ -197,6 +197,64 @@ function bai11()
                 }   
         }
     resultb11.innerText = res;
+}
+
+//bai 12
+let array12 = document.querySelector('#input12')
+let resultb12 = document.querySelector(".result12");
+function bai12()
+{
+    let arr12 = array12.value.split('');
+    let res = [];
+    for( let i = 0; i < arr12.length; i++)
+        {
+            if(arr12[i+1] == arr12[i])
+                {
+                    continue;
+                }
+            res += arr12[i];
+        }
+    resultb12.innerText = res;
+    
+}
+
+
+//bai 16
+function bai16()
+{
+    let arr16 = document.querySelector('#input16').value.split('');
+    let resultb6 = document.querySelector(".result16");
+    let result = arr16.filter(element => {
+        return element % 2 !== 0
+    });
+    console.log(result);
+    resultb6.innerText = result.map((element)=> element * element);
+}
+
+//bai 17
+function bai17()
+{
+    let arr = document.querySelector('#input17').value.split('');
+    let resultb6 = document.querySelector(".result17");
+    let result = arr16.filter(element => {
+        return element % 2 !== 0
+    });
+    console.log(result);
+    resultb6.innerText = result.map((element)=> element * element);
+
+}
+
+//bai 17
+function bai18()
+{
+    let arr = document.querySelector('#input18').value.split('');
+    let resultb6 = document.querySelector(".result18");
+    let result = arr16.filter(element => {
+        return element % 2 !== 0
+    });
+    console.log(result);
+    resultb6.innerText = result.map((element)=> element * element);
+
 }
 
 
