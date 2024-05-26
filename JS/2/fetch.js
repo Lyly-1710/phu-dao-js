@@ -42,5 +42,13 @@ fetch(api)
     } else {
       console.log("No matching variant found."); // Handle potential case where no matching ID exists
     }
+    const TestBundle = items.find(
+      (item) => item.title === "Test bundle"
+    );
+    const total = TestBundle.variants.reduce((acc, curr) =>{
+      return acc + curr.price
+    }, 0)
+    console.log("Test Bundle")
+    console.log(`Teotal price: ${total}USD`)
   })
   .catch(err => console.error(err));
